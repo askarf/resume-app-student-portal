@@ -6,13 +6,13 @@ export function Footer() {
     footerLinks = (
       <nav>
         <p>Copyright 2023</p>
-        <LogoutLink />
       </nav>
     );
   } else {
     footerLinks = (
       <nav>
         <p>Copyright 2023</p>
+        <LogoutLink />
       </nav>
     );
   }
