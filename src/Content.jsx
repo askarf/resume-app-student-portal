@@ -72,7 +72,7 @@ export function Content() {
         <Route path="/experience" element={<EditExperience students={students} />} />
         <Route path="/student" element={<EditStudent />} />
         <Route path="/skill" element={<EditSkill />} />
-        <Route path="/education" element={<EditEducation />} />
+        <Route path="/education" element={<EditEducation students={students} />} />
         <Route path="/capstone" element={<EditCapstone />} />
       </Routes>
     </div>
