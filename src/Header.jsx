@@ -1,7 +1,23 @@
 export function Header() {
-  return (
-    <div>
-      <h1>this is our header</h1>
-    </div>
-  );
+  let navigationLinks;
+  if (localStorage.jwt === undefined) {
+    navigationLinks = (
+      <nav>
+        <a>Student Portal</a>
+        <a>Personal Information</a>
+        <a>Experience</a>
+        <a>Education</a>
+        <a>Skills</a>
+        <a>Capstone</a>
+      </nav>
+    );
+  } else {
+    navigationLinks = (
+      <nav>
+        <a>Student Portal</a>
+      </nav>
+    );
+  }
+
+  return <header>{navigationLinks}</header>;
 }
