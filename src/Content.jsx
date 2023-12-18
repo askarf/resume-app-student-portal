@@ -3,6 +3,7 @@ import { EditEducation } from "./EditEducation";
 import { EditExperience } from "./EditExperience";
 import { EditSkill } from "./EditSkill";
 import { EditStudent } from "./EditStudent";
+import { Routes, Route } from "react-router-dom";
 
 export function Content() {
   var students = [
@@ -20,6 +21,7 @@ export function Content() {
       photo: "www.photo.com",
       experience: [
         {
+          id: 1,
           start_date: "nov 4",
           end_date: "nov 8",
           job_title: "partners",
@@ -27,6 +29,7 @@ export function Content() {
           details: "worked hard to make coffee",
         },
         {
+          id: 2,
           start_date: "dec 4",
           end_date: "dec 8",
           job_title: "barista",
@@ -65,11 +68,13 @@ export function Content() {
     <div>
       <h1>this is our Content</h1>
       <p>{students[0].first_name}</p>
-      <EditStudent />
-      <EditSkill />
-      <EditExperience />
-      <EditEducation />
-      <EditCapstone />
+      <Routes>
+        <Route path="/experience" element={<EditExperience students={students} />} />
+        <Route path="/student" element={<EditStudent />} />
+        <Route path="/skill" element={<EditSkill />} />
+        <Route path="/education" element={<EditEducation />} />
+        <Route path="/capstone" element={<EditCapstone />} />
+      </Routes>
     </div>
   );
 }
