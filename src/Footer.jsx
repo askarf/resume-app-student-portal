@@ -1,7 +1,20 @@
+import { LogoutLink } from "./LogoutLink";
+
 export function Footer() {
-  return (
-    <div>
-      <h1>this is our Footer</h1>
-    </div>
-  );
+  let footerLinks;
+  if (localStorage.jwt === undefined) {
+    footerLinks = (
+      <nav>
+        <p>Copyright 2023</p>
+        <LogoutLink />
+      </nav>
+    );
+  } else {
+    footerLinks = (
+      <nav>
+        <p>Copyright 2023</p>
+      </nav>
+    );
+  }
+  return <div>{footerLinks}</div>;
 }
