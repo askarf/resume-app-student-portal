@@ -4,17 +4,17 @@ export function Header() {
     navigationLinks = (
       <nav>
         <a>Student Portal</a>
-        <a>Personal Information</a>
-        <a>Experience</a>
-        <a>Education</a>
-        <a>Skills</a>
-        <a>Capstone</a>
       </nav>
     );
   } else {
     navigationLinks = (
       <nav>
         <a>Student Portal</a>
+        <a>Personal Information</a>
+        <a>Experience</a>
+        <a>Education</a>
+        <a>Skills</a>
+        <a>Capstone</a>
       </nav>
     );
   }
