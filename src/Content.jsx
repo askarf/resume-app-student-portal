@@ -60,7 +60,7 @@ export function Content() {
   }
   return (
     <div>
-      <button onClick={() => console.log(studentId)}>button</button>
+      {/* <button onClick={() => console.log(studentId)}>button</button> */}
       <Routes>
         <Route
           path="/experience"
