@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import axios from "axios";
-import React from "react";
 import { useState, useEffect } from "react";
 
 export function Home(props) {
@@ -14,7 +14,7 @@ export function Home(props) {
   });
   useEffect(() => {
     // Fetch student data when the component mounts
-    axios.get("http://localhost:3000/students/1.json").then((response) => {
+    axios.get(`http://localhost:3000/students/${props.studentId}.json`).then((response) => {
       console.log(response.data);
       setStudent(response.data);
     });
