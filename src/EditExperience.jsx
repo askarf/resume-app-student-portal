@@ -30,12 +30,13 @@ export function EditExperience(props) {
               <div>
                 Details: <input defaultValue={experience.details} name="details" type="text" />
               </div>
+              <button>Update Info</button>
+              <p>-------</p>
             </form>
           ))
         ) : (
           <p>No experiences available</p>
         )}
-        <button>Update Info</button>
       </div>
     </div>
   );
