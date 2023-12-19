@@ -48,7 +48,7 @@ export function EditSkill(props) {
           props.student.skills.map((skill) => (
             <form key={skill.id} onSubmit={(event) => handleEditSkill(skill.id, event)}>
               <div>
-                Skill Name: <input defaultValue={skill.skill} name="skill_name" type="text" />
+                Skill Name: <input defaultValue={skill.skill_name} name="skill_name" type="text" />
               </div>
 
               <button type="submit">Update Skill</button>

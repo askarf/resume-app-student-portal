@@ -191,7 +191,7 @@ export function Home(props) {
             {student.skills && (
               <div id="skills" className="shadow-lg px-10 pb-10 pt-5 mb-10">
                 <button className="border border-gray-900 rounded-full py-2 pl-2 flex items-center ml-auto hover:bg-blue-500 hover:border-blue-700 ">
-                  <a href="/skills">
+                  <a href="/skill">
                     <img src="images/pen.jpg" alt="Pen" className="w-6 h-6 mr-2 rounded-full object-cover " />
                   </a>
                 </button>
