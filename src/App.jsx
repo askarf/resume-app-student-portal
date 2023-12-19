@@ -7,14 +7,26 @@ import { BrowserRouter } from "react-router-dom";
 
 import { Login } from "./Login";
 
-
 function App() {
+  let homePage;
+  if (localStorage.jwt === undefined) {
+    homePage = (
+      <div>
+        <Login />
+      </div>
+    );
+  } else {
+    homePage = (
+      <div>
+        <Content />
+      </div>
+    );
+  }
   return (
     <div>
       <BrowserRouter>
         <Header />
-        <Login />
-        <Content />
+        {homePage}
         <Footer />
       </BrowserRouter>
     </div>
