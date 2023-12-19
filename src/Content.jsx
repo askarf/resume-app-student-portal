@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { EditCapstone } from "./EditCapstone";
 import { EditEducation } from "./EditEducation";
 import { EditExperience } from "./EditExperience";
@@ -36,10 +36,6 @@ export function Content() {
         setErrors(["Invalid email or password"]);
       });
   };
-
-  useEffect(() => {
-    console.log(studentId);
-  }, [studentId]);
 
   const handleShowStudent = (id) => {
     axios.get(`http://localhost:3000/students/${id}.json`).then((response) => {
