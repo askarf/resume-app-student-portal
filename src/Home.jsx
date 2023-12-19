@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
+
 export function Home(props) {
   const linkedinLogoUrl = "images/linkedin.png";
   const twitterLogoUrl = "images/ex.jpg";
@@ -53,6 +54,7 @@ export function Home(props) {
   }
   return (
     <div className="text-3xl font-mono text-blue-900">
+      npm run dev
       <h1 className="text-center font-mono  pb-40 bg-slate-200 text-blue-900 text-5xl font-bold"></h1>
       <div id="personal-info " className="">
         <div className="flex justify-center items-center">
