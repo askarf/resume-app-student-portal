@@ -70,7 +70,10 @@ export function Content() {
           path="/student"
           element={<EditStudent onShowStudent={handleShowStudent} studentId={studentId} student={student} />}
         />
-        <Route path="/skill" element={<EditSkill />} />
+        <Route
+          path="/skill"
+          element={<EditSkill onShowStudent={handleShowStudent} studentId={studentId} student={student} />}
+        />
         <Route path="/education" element={<EditEducation />} />
         <Route path="/capstone" element={<EditCapstone />} />
         <Route path="/" element={homePage} />
