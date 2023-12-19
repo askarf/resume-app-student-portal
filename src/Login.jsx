@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Home } from "./Home";
 
 const jwt = localStorage.getItem("jwt");
 if (jwt) {
@@ -49,6 +50,7 @@ export function Login() {
         </div>
         <button type="submit">Login</button>
       </form>
+      <Home />
     </div>
   );
 }
