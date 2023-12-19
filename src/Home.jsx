@@ -11,7 +11,13 @@ export function Home(props) {
     skills: [],
     campstones: [],
   });
-
+  useEffect(() => {
+    // Fetch student data when the component mounts
+    axios.get("http://localhost:3000/students/1.json").then((response) => {
+      console.log(response.data);
+      setStudent(response.data);
+    });
+  }, []);
   const handleStudent = () => {
     axios.get("http://localhost:3000/students/1.json").then((response) => {
       console.log(response.data);
@@ -47,7 +53,6 @@ export function Home(props) {
   }
   return (
     <div className="text-3xl font-mono text-blue-900">
-      <button onClick={handleStudent}>button</button>
       <h1 className="text-center font-mono  pb-40 bg-slate-200 text-blue-900 text-5xl font-bold"></h1>
       <div id="personal-info " className="">
         <div className="flex justify-center items-center">
