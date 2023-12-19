@@ -19,18 +19,18 @@ export function Home(props) {
       setStudent(response.data);
     });
   }, []);
-  const handleStudent = () => {
-    axios.get("http://localhost:3000/students/1.json").then((response) => {
-      console.log(response.data);
-      setStudent(response.data);
-    });
-  };
-  const InfoCard = ({ title, children }) => (
-    <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-      <h2 className="text-3xl font-semibold text-blue-900 mb-4">{title}</h2>
-      {children}
-    </div>
-  );
+  // const handleStudent = () => {
+  //   axios.get("http://localhost:3000/students/1.json").then((response) => {
+  //     console.log(response.data);
+  //     setStudent(response.data);
+  //   });
+  // };
+  // const InfoCard = ({ title, children }) => (
+  //   <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+  //     <h2 className="text-3xl font-semibold text-blue-900 mb-4">{title}</h2>
+  //     {children}
+  //   </div>
+  // );
   function formatDate(dateString) {
     const options = { year: "numeric", month: "long", day: "numeric" };
     const formattedDate = new Date(dateString).toLocaleDateString(undefined, options);
@@ -58,7 +58,7 @@ export function Home(props) {
       <h1 className="text-center font-mono  pb-40 bg-slate-200 text-blue-900 text-5xl font-bold"></h1>
       <div id="personal-info " className="">
         <div className="flex justify-center items-center">
-          <div className="flex h-20 justify-center items-center h-screen">
+          <div className="flex h-20 justify-center items-center">
             <div className="w-44 h-44 border-2 border-blue-900 rounded-full overflow-hidden flex items-center justify-center pt-0 pb-0">
               <img
                 src={student.photo}
