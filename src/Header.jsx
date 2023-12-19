@@ -10,7 +10,7 @@ export function Header() {
     navigationLinks = (
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img
               src="https://1000logos.net/wp-content/uploads/2020/09/Portal-2-emblem.jpg"
               className="h-8"
@@ -35,9 +35,9 @@ export function Header() {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
