@@ -66,9 +66,11 @@ export function Home(props) {
   }
   return (
     <div className="text-3xl font-mono text-blue-900">
-      <h1 className="text-center font-mono  pb-40 bg-slate-300 text-blue-900 text-5xl font-bold"></h1>
       <div id="personal-info " className="">
-        <div className="flex justify-center items-center bg-gray-100">
+        <div
+          className="flex justify-center items-center bg-gray-100 pt-40"
+          style={{ backgroundImage: 'url("images/profiles.jpg")', backgroundSize: "cover" }}
+        >
           <div className="flex h-20 justify-center items-center  ">
             <div className="w-44 h-44 border-2 border-blue-900 rounded-full overflow-hidden flex items-center justify-center pt-0 pb-0 ">
               <img
