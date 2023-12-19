@@ -83,7 +83,9 @@ export function Home(props) {
         {/* BASIC INFORMATION */}
         <div id="basic-info" className="bg-white rounded-lg shadow-md pb-10 bg-gray-100">
           <button className="border border-gray-900 rounded-full py-2 pl-2 flex items-center ml-auto hover:bg-blue-500 hover:border-blue-700 ">
-            <img src="images/pen.jpg" alt="Pen" className="w-6 h-6 mr-2 rounded-full object-cover " />
+            <a href="/student">
+              <img src="images/pen.jpg" alt="Pen" className="w-6 h-6 mr-2 rounded-full object-cover " />
+            </a>
           </button>
           <h1 className=" pt-10 text-center font-mono text-blue-900 text-5xl font-bold">
             {student.first_name} {student.last_name}
@@ -128,7 +130,9 @@ export function Home(props) {
             {student.experiences && (
               <div className="shadow-lg px-10 pb-10 pt-5 mb-10" id="experience">
                 <button className="border border-gray-900 rounded-full py-2 pl-2 flex items-center ml-auto hover:bg-blue-500 hover:border-blue-700 ">
-                  <img src="images/pen.jpg" alt="Pen" className="w-6 h-6 mr-2 rounded-full object-cover " />
+                  <a href="/experience">
+                    <img src="images/pen.jpg" alt="Pen" className="w-6 h-6 mr-2 rounded-full object-cover " />
+                  </a>
                 </button>
                 <h2 className="text-3xl font-semibold text-blue-900 mb-4 pb-2 ">Experiences:</h2>
                 {student.experiences.map((exp, index) => (
@@ -154,8 +158,11 @@ export function Home(props) {
             {student.educations && (
               <div id="education" className="shadow-lg px-10 pb-10 pt-5 mb-10">
                 <button className="border border-gray-900 rounded-full py-2 pl-2 flex items-center ml-auto hover:bg-blue-500 hover:border-blue-700 ">
-                  <img src="images/pen.jpg" alt="Pen" className="w-6 h-6 mr-2 rounded-full object-cover " />
+                  <a href="/education">
+                    <img src="images/pen.jpg" alt="Pen" className="w-6 h-6 mr-2 rounded-full object-cover " />
+                  </a>
                 </button>
+
                 <h2 className="text-3xl font-semibold text-blue-900 mb-4 ">Educations:</h2>
                 {student.educations.map((edu, index) => (
                   <div key={index} className="mb-6 border border-gray-200 shadow-lg rounded p-5">
@@ -182,7 +189,9 @@ export function Home(props) {
             {student.skills && (
               <div id="skills" className="shadow-lg px-10 pb-10 pt-5 mb-10">
                 <button className="border border-gray-900 rounded-full py-2 pl-2 flex items-center ml-auto hover:bg-blue-500 hover:border-blue-700 ">
-                  <img src="images/pen.jpg" alt="Pen" className="w-6 h-6 mr-2 rounded-full object-cover " />
+                  <a href="/skills">
+                    <img src="images/pen.jpg" alt="Pen" className="w-6 h-6 mr-2 rounded-full object-cover " />
+                  </a>
                 </button>
                 <h2 className="text-3xl font-semibold text-blue-900 mb-4 ">Skills</h2>
                 <div className=" mb-6 border border-gray-200 shadow-lg rounded p-5">
@@ -198,7 +207,9 @@ export function Home(props) {
             {student.capstones && (
               <div id="capstone" className="shadow-lg px-10 pb-10 pt-5 mb-10">
                 <button className="border border-gray-900 rounded-full py-2 pl-2 flex items-center ml-auto hover:bg-blue-500 hover:border-blue-700 ">
-                  <img src="images/pen.jpg" alt="Pen" className="w-6 h-6 mr-2 rounded-full object-cover " />
+                  <a href="/capstone">
+                    <img src="images/pen.jpg" alt="Pen" className="w-6 h-6 mr-2 rounded-full object-cover " />
+                  </a>
                 </button>
                 <h2 className="text-3xl font-semibold text-blue-900 mb-4 ">Capstones</h2>
                 {student.capstones.map((cap, index) => (
