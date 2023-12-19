@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Home } from "./Home";
 
 const jwt = localStorage.getItem("jwt");
@@ -9,6 +9,7 @@ if (jwt) {
 
 export function Login() {
   const [errors, setErrors] = useState([]);
+  const [currentUserId, setCurrentUserId] = useState();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,17 +18,20 @@ export function Login() {
     axios
       .post("http://localhost:3000/sessions.json", params)
       .then((response) => {
-        console.log(response.data);
         axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
         localStorage.setItem("jwt", response.data.jwt);
+        setCurrentUserId(response.data.student_id);
         event.target.reset();
-        window.location.href = "/"; // Change this to hide a modal, redirect to a specific page, etc.
       })
       .catch((error) => {
         console.log(error.response);
         setErrors(["Invalid email or password"]);
       });
   };
+
+  useEffect(() => {
+    console.log("currentUserId changed:", currentUserId);
+  }, [currentUserId]);
 
   return (
     <div id="login">

@@ -31,6 +31,18 @@ export function Home(props) {
   //     {children}
   //   </div>
   // );
+  // const handleStudent = () => {
+  //   axios.get("http://localhost:3000/students/1.json").then((response) => {
+  //     console.log(response.data);
+  //     setStudent(response.data);
+  //   });
+  // };
+  // const InfoCard = ({ title, children }) => (
+  //   <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+  //     <h2 className="text-3xl font-semibold text-blue-900 mb-4">{title}</h2>
+  //     {children}
+  //   </div>
+  // );
   function formatDate(dateString) {
     const options = { year: "numeric", month: "long", day: "numeric" };
     const formattedDate = new Date(dateString).toLocaleDateString(undefined, options);

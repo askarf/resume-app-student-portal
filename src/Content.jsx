@@ -13,10 +13,10 @@ export function Content() {
       {/* <p>{students[0].first_name}</p> */}
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/experience" element={<EditExperience students={students} />} />
+        <Route path="/experience" element={<EditExperience />} />
         <Route path="/student" element={<EditStudent />} />
         <Route path="/skill" element={<EditSkill />} />
-        <Route path="/education" element={<EditEducation students={students} />} />
+        <Route path="/education" element={<EditEducation />} />
         <Route path="/capstone" element={<EditCapstone />} />
       </Routes>
     </div>
