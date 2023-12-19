@@ -35,31 +35,74 @@ export function EditExperience(props) {
   };
 
   return (
-    <div>
-      <h1>Experience</h1>
-      <p>{props.student.first_name}</p>
+    <div className="shadow-lg px-10 pb-10 pt-5 mb-10">
+      <h1 className="text-3xl font-semibold text-blue-900 mb-4 ">Experience</h1>
+      <p className="text-2xl font-semibold text-blue-700 mb-4 pb-2 underline py-5">{props.student.first_name}</p>
       <div>
         {props.student.experiences && props.student.experiences.length > 0 ? (
           props.student.experiences.map((experience) => (
-            <form key={experience.id} onSubmit={(event) => handleEditExperience(experience.id, event)}>
-              <div>
-                Start Date: <input defaultValue={experience.start_date} name="start_date" type="text" />
+            <form
+              key={experience.id}
+              className="mb-6 border border-gray-200 shadow-lg rounded p-5"
+              onSubmit={(event) => handleEditExperience(experience.id, event)}
+            >
+              <div className="text-2xl font-semibold text-gray-900">
+                Start Date:{" "}
+                <input
+                  defaultValue={experience.start_date}
+                  name="start_date"
+                  type="text"
+                  className="text-mds font-semibold text-blue-800"
+                />
               </div>
-              <div>
-                End Date: <input defaultValue={experience.end_date} name="end_date" type="text" />
+              <div className="text-2xl font-semibold text-gray-900">
+                End Date:{" "}
+                <input
+                  defaultValue={experience.end_date}
+                  name="end_date"
+                  type="text"
+                  className="text-mds font-semibold text-blue-800"
+                />
               </div>
-              <div>
-                Job Title: <input defaultValue={experience.job_title} name="job_title" type="text" />
+              <div className="text-2xl font-semibold text-gray-900">
+                Job Title:{" "}
+                <input
+                  defaultValue={experience.job_title}
+                  name="job_title"
+                  type="text"
+                  className="text-mds font-semibold text-blue-800"
+                />
               </div>
-              <div>
-                Company Name: <input defaultValue={experience.company_name} name="company_name" type="text" />
+              <div className="text-2xl font-semibold text-gray-900">
+                Company Name:{" "}
+                <input
+                  defaultValue={experience.company_name}
+                  name="company_name"
+                  type="text"
+                  className="text-mds font-semibold text-blue-800"
+                />
               </div>
-              <div>
-                Details: <input defaultValue={experience.details} name="details" type="text" />
+              <div className="text-2xl font-semibold text-gray-900">
+                Details:{" "}
+                <input
+                  defaultValue={experience.details}
+                  name="details"
+                  type="text"
+                  className="text-mds font-semibold text-blue-800"
+                />
               </div>
-              <button type="submit">Update Info</button>
-              <button onClick={() => handleDeleteExperince(experience.id)}>Delete</button>
-              <p>-------</p>
+              <button
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2 mt-3"
+              >
+                Update Info
+              </button>
+              <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded px-2 "
+                onClick={() => handleDeleteExperince(experience.id)}
+              >
+                Delete
+              </button>
             </form>
           ))
         ) : (
@@ -67,23 +110,56 @@ export function EditExperience(props) {
         )}
       </div>
       <div>
-        <form onSubmit={handleCreateExperience}>
-          <div>
-            Start Date: <input name="start_date" type="text" />
+        <form onSubmit={handleCreateExperience} className="mb-6 border border-gray-200 shadow-lg rounded p-5">
+          <div className="text-2xl font-semibold text-gray-900">
+            Start Date:{" "}
+            <input
+              name="start_date"
+              type="text"
+              className="text-mds font-semibold text-blue-800 bg-gray-200 rounded ml-2"
+            />
           </div>
-          <div>
-            End Date: <input name="end_date" type="text" />
+          <div className="text-2xl font-semibold text-gray-900">
+            End Date:{" "}
+            <input
+              name="end_date"
+              type="text"
+              className="text-mds font-semibold text-blue-800 bg-gray-200 rounded ml-2 mt-3"
+            />
           </div>
-          <div>
-            Job Title: <input name="job_title" type="text" />
+          <div className="text-2xl font-semibold text-gray-900">
+            Job Title:{" "}
+            <input
+              name="job_title"
+              type="text"
+              className="text-mds font-semibold text-blue-800 bg-gray-200 rounded ml-2 mt-3"
+            />
           </div>
-          <div>
-            Company Name: <input name="company_name" type="text" />
+          <div className="text-2xl font-semibold text-gray-900">
+            Company Name:{" "}
+            <input
+              name="company_name"
+              type="text"
+              className="text-mds font-semibold text-blue-800 bg-gray-200 rounded ml-2 mt-3"
+            />
           </div>
-          <div>
-            Details: <input name="details" type="text" />
+          <div className="text-2xl font-semibold text-gray-900 flex flex-col">
+            <label htmlFor="details" className="mb-1 mt-2">
+              Details:
+            </label>
+            <textarea
+              id="details"
+              name="details"
+              className="text-md font-semibold text-blue-800 bg-gray-200 rounded p-2"
+            ></textarea>
           </div>
-          <button type="submit">Add Experience</button>
+
+          <button
+            type="submit"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded px-2 mt-4"
+          >
+            Add Experience
+          </button>
         </form>
       </div>
     </div>
