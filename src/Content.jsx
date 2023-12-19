@@ -1,3 +1,4 @@
+import { Home } from "./Home";
 import { useState } from "react";
 import { EditCapstone } from "./EditCapstone";
 import { EditEducation } from "./EditEducation";
@@ -42,6 +43,21 @@ export function Content() {
       setStudent(response.data);
     });
   };
+
+  let homePage;
+  if (localStorage.jwt === undefined) {
+    homePage = (
+      <div>
+        <Login handleSubmit={handleSubmit} errors={errors} />
+      </div>
+    );
+  } else {
+    homePage = (
+      <div>
+        <Home studentId={studentId} />
+      </div>
+    );
+  }
   return (
     <div>
       <button onClick={() => console.log(studentId)}>button</button>
@@ -50,11 +66,11 @@ export function Content() {
           path="/experience"
           element={<EditExperience onShowStudent={handleShowStudent} studentId={studentId} student={student} />}
         />
-        <Route path="/" element={<Login handleSubmit={handleSubmit} errors={errors} />} />
         <Route path="/student" element={<EditStudent />} />
         <Route path="/skill" element={<EditSkill />} />
         <Route path="/education" element={<EditEducation />} />
         <Route path="/capstone" element={<EditCapstone />} />
+        <Route path="/" element={homePage} />
       </Routes>
     </div>
   );
