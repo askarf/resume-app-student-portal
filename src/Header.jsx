@@ -2,8 +2,17 @@ export function Header() {
   let navigationLinks;
   if (localStorage.jwt === undefined) {
     navigationLinks = (
-      <nav>
-        <a>Student Portal</a>
+      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+            <img
+              src="https://1000logos.net/wp-content/uploads/2020/09/Portal-2-emblem.jpg"
+              className="h-8"
+              alt="Portal Logo"
+            />
+            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Student Portal</span>
+          </a>
+        </div>
       </nav>
     );
   } else {
