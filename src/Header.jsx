@@ -10,11 +10,11 @@ export function Header() {
     navigationLinks = (
       <nav>
         <a>Student Portal</a>
-        <a>Personal Information</a>
-        <a>Experience</a>
-        <a>Education</a>
-        <a>Skills</a>
-        <a>Capstone</a>
+        <a href="#personal">Personal Information</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#capstone">Capstone</a>
       </nav>
     );
   }

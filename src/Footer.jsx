@@ -11,8 +11,8 @@ export function Footer() {
   } else {
     footerLinks = (
       <nav>
-        <p>Copyright 2023</p>
         <LogoutLink />
+        <p>Copyright 2023</p>
       </nav>
     );
   }
