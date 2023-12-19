@@ -85,7 +85,7 @@ export function Home(props) {
           <h1 className=" pt-20 text-center font-mono text-blue-900 text-5xl font-bold">
             {student.first_name} {student.last_name}
           </h1>
-          <div className="flex flex-col items-center pt-5 ">
+          <div id="personal" className="flex flex-col items-center pt-5 ">
             <p className="text-gray-600 pb-2">Name: {student.email}</p>
             <p className="text-gray-600">Email: {student.phone_number}</p>
             <div className="flex mt-4 p-2">
@@ -123,7 +123,7 @@ export function Home(props) {
             </div>
 
             {student.experiences && (
-              <div className="shadow-lg p-10 mb-10">
+              <div className="shadow-lg p-10 mb-10" id="experience">
                 <h2 className="text-3xl font-semibold text-blue-900 mb-4 pb-2 ">Experiences:</h2>
                 {student.experiences.map((exp, index) => (
                   <div key={index} className="mb-6 border border-gray-200 shadow-lg rounded p-5">
@@ -146,7 +146,7 @@ export function Home(props) {
             )}
 
             {student.educations && (
-              <div className="shadow-lg p-10 mb-10">
+              <div id="education" className="shadow-lg p-10 mb-10">
                 <h2 className="text-3xl font-semibold text-blue-900 mb-4 ">Educations:</h2>
                 {student.educations.map((edu, index) => (
                   <div key={index} className="mb-6 border border-gray-200 shadow-lg rounded p-5">
@@ -171,7 +171,7 @@ export function Home(props) {
             )}
 
             {student.skills && (
-              <div className="shadow-lg p-10 mb-10">
+              <div id="skills" className="shadow-lg p-10 mb-10">
                 <h2 className="text-3xl font-semibold text-blue-900 mb-4 ">Skills</h2>
                 <div className=" mb-6 border border-gray-200 shadow-lg rounded p-5">
                   {student.skills.map((skill, index) => (
@@ -184,7 +184,7 @@ export function Home(props) {
             )}
 
             {student.capstones && (
-              <div className="shadow-lg p-10 mb-10">
+              <div id="capstone" className="shadow-lg p-10 mb-10">
                 <h2 className="text-3xl font-semibold text-blue-900 mb-4 ">Capstones</h2>
                 {student.capstones.map((cap, index) => (
                   <div key={index} className="mb-6 border border-gray-200 shadow-lg rounded p-5 mb-20">
