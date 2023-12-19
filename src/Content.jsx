@@ -60,7 +60,7 @@ export function Content() {
   }
   return (
     <div>
-      <button onClick={() => console.log(studentId)}>button</button>
+      {/* <button onClick={() => console.log(studentId)}>button</button> */}
       <Routes>
         <Route
           path="/experience"
@@ -75,7 +75,10 @@ export function Content() {
           element={<EditSkill onShowStudent={handleShowStudent} studentId={studentId} student={student} />}
         />
         <Route path="/education" element={<EditEducation />} />
-        <Route path="/capstone" element={<EditCapstone />} />
+        <Route
+          path="/capstone"
+          element={<EditCapstone onShowStudent={handleShowStudent} studentId={studentId} student={student} />}
+        />
         <Route path="/" element={homePage} />
       </Routes>
     </div>
